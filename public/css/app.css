@@ -12,7 +12,7 @@ nav {
 }
 
 .header-image {
-    background-image: url({{ asset('/images/header1140x152.png') }});
+    background-image: url("{{ asset('/images/header1140x152.png') }}");
 }
 
 .copyright {
