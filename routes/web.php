@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index");
+Route::get('/composers', 'App\Http\Controllers\ComposerController@index')->name("composer.index");
+Route::get('/composers/{id}', 'App\Http\Controllers\ComposerController@show')->name("composer.show");

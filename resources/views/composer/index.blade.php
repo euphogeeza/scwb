@@ -1,32 +1,19 @@
 @extends('layouts.app')
 @section('title', $viewData["title"])
+@section('subtitle', $viewData["subtitle"])
 @section('content')
 <div class="text-center">
-    Welcome to the Snowdown Colliery Welfare Bands Website.
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col lg-12">
-            <h1>Story Title</h1>
+    <div class="container">
+        <div class="row">
+            <h1>List of All Composers / Arrangers</h1>
         </div>
-    </div>
-    <div class="row">
-        <div class="col lg-8">
-            <p>Date: </p>
+        @foreach ($viewData["composers"] as $composer)
+        <div class="row">
+            <a href="{{ route('composer.show', ["id"=>$composer["id"]]) }}">
+                {{ $composer["lastname"] }} , {{ $composer["firstname"] }}
+            </a>
         </div>
-        <div class="col lg-4">
-            <p>Another label:</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col lg-12">
-            <p>Image for story goes here</p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col lg-12">
-            <p>Body of story goes here</p>
-        </div>
+        @endforeach
     </div>
 </div>
 @endsection
