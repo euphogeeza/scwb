@@ -9,8 +9,8 @@
         </div>
         @foreach ($viewData["composers"] as $composer)
         <div class="row">
-            <a href="{{ route('composer.show', ["id"=>$composer["id"]]) }}">
-                {{ $composer["lastname"] }} , {{ $composer["firstname"] }}
+            <a href="{{ route('composer.show', ["id"=>$composer->getId()]) }}">
+                {{ $composer->getComposer() }}
             </a>
         </div>
         @endforeach

@@ -6,8 +6,8 @@
     <div class="container">
         <div class="row">
             <h1>{{ $viewData["subtitle"] }}</h1>
-            <p>Lastname: {{  $viewData["composer"]["lastname"] }}</p>
-            <p>Firstname: {{  $viewData["composer"]["firstname"] }}</p>
+            <p>Lastname: {{  $viewData["composer"]->getLastname() }}</p>
+            <p>Firstname: {{  $viewData["composer"]->getFirstname() }}</p>
         </div>
     </div>
 </div>
