@@ -29,10 +29,11 @@
                     <span class="navbar-toggler-icon"> </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <a href="#" class="navbar-brand">Home</a>
+                    <a href="{{ route('home.index') }}" class="navbar-brand">Home</a>
                     <a href="#" class="navbar-brand">About</a>
                     <a href="#" class="navbar-brand">Performances</a>
                     <a href="#" class="navbar-brand">Library</a>
+                    <a href="{{ route('composer.index') }}" class="navbar-brand">Composers</a>
                     <a href="#" class="navbar-brand">Photo Albums</a>
                 </div>
             </nav>
