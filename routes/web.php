@@ -21,5 +21,8 @@ Route::get('/composer/{id}', 'App\Http\Controllers\ComposerController@show')->na
 Route::get('/styles', 'App\Http\Controllers\StyleController@index')->name("style.index");
 Route::get('/style/{id}', 'App\Http\Controllers\StyleController@show')->name("style.show");
 
-Route::get('/concerts', 'App\Http\Controllers\ConcertController@index')->name("concertindex");
+Route::get('/concerts', 'App\Http\Controllers\ConcertController@index')->name("concert.index");
 Route::get('/concert/{id}', 'App\Http\Controllers\ConcertController@show')->name("concert.show");
+
+Route::get('/musicsources', 'App\Http\Controllers\MusicsourceController@index')->name("musicsource.index");
+Route::get('/musicsource/{id}', 'App\Http\Controllers\MusicsourceController@show')->name("musicsource.show");
