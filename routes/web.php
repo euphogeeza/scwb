@@ -26,3 +26,6 @@ Route::get('/concert/{id}', 'App\Http\Controllers\ConcertController@show')->name
 
 Route::get('/musicsources', 'App\Http\Controllers\MusicsourceController@index')->name("musicsource.index");
 Route::get('/musicsource/{id}', 'App\Http\Controllers\MusicsourceController@show')->name("musicsource.show");
+
+Route::get('/music', 'App\Http\Controllers\MusicController@index')->name("music.index");
+Route::get('/piece/{id}', 'App\Http\Controllers\MusicController@show')->name("music.show");
