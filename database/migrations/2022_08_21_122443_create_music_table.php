@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('music', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->bigInteger('composer_id')->unsigned();
-            $table->bigInteger('arranger_id')->unsigned();
-            $table->bigInteger('style_id')->unsigned();
+            $table->unsignedBigInteger('composer_id')->unsigned();
+            $table->unsignedBigInteger('arranger_id')->unsigned();
+            $table->unsignedBigInteger('style_id')->unsigned();
             $table->string('soloist')->nullable();
             $table->boolean('in_pad')->default(0);
             $table->string('envelope')->nullable();
