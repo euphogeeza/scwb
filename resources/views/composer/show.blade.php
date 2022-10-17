@@ -2,13 +2,31 @@
 @section('title', $viewData["title"])
 @section('subtitle', $viewData["subtitle"])
 @section('content')
-<div class="text-center">
-    <div class="container">
-        <div class="row">
-            <h1>{{ $viewData["subtitle"] }}</h1>
-            <p>Lastname: {{  $viewData["composer"]->getLastname() }}</p>
-            <p>Firstname: {{  $viewData["composer"]->getFirstname() }}</p>
-        </div>
+<div class="card">
+    <div class="card-header"><h2>Composer Information</h2></div>
+    <div class="card-body">
+        <p>Lastname: {{  $viewData["composer"]->getLastname() }}</p>
+        <p>Firstname: {{  $viewData["composer"]->getFirstname() }}</p>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">Music in Library COMPOSED by {{ $viewData["composer"]->getFirstname() . " " . $viewData["composer"]->getLastname() }}</div>
+    <div class="card-body">
+        <ul>
+            @foreach($viewData["music_composed_by"] as $piece)
+            <li>{{ $piece->title }}</li>
+            @endforeach
+        </ul>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">Music in Library ARRANGED by {{ $viewData["composer"]->getFirstname() . " " . $viewData["composer"]->getLastname() }}</div>
+    <div class="card-body">
+        <ul>
+            @foreach($viewData["music_arranged_by"] as $piece)
+            <li>{{ $piece->title }}</li>
+            @endforeach
+        </ul>
     </div>
 </div>
 @endsection

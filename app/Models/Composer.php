@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\ViewComposersMusic;
 
 class Composer extends Model
 {
@@ -77,5 +78,25 @@ class Composer extends Model
         } else {
             return $last . ", " . $first;
         }
+    }
+
+    public function musicComposedBy()
+    {
+        return $this->hasMany(Music::class, 'composer_id', 'id');
+    }
+
+    public function getMusicComposedBy()
+    {
+        return $this->musicComposedBy;
+    }
+
+    public function musicArrangedBy()
+    {
+        return $this->hasMany(Music::class, 'arranger_id', 'id');
+    }
+
+    public function getMusicArrangedBy()
+    {
+        return $this->musicArrangedBy;
     }
 }
