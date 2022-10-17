@@ -3,16 +3,20 @@ nav {
 }
 
 .bg-primary {
-    background-color: #2c3e50 !important;
+    /* background-color: #2c3e50 !important; */
+    background-color: #000000 !important;
+    /* background-image: url("http://localhost:8000/images/blurryBand1920x638.png");
+    background-repeat: no-repeat; */
 }
 
 .bg-secondary {
-    background-color: #1abc9c !important; 
+    background-color: #61a2e4 !important; 
     /* background-color: #60b460 !important; */
 }
 
 .header-image {
-    background-image: url("{{ asset('/images/header1140x152.png') }}");
+    background-image: url("http://localhost:8000/images/blurryBand1920x638.png");
+    background-repeat: no-repeat;
 }
 
 .copyright {
