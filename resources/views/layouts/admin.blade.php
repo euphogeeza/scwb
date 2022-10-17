@@ -28,6 +28,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('admin.style.index') }}" class="nav-link text-white">
+                        Musical Styles
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('home.index') }}" class="mt-2 btn bg-primary text-white">
                         Go back to the homepage
                     </a>

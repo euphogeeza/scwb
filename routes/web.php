@@ -68,10 +68,18 @@ Route::get(
     'App\Http\Controllers\MusicController@show'
 )->name("music.show");
 
+/*
+ *      Admin Panel Route
+ */
+
 Route::get(
     '/admin',
     'App\Http\Controllers\Admin\AdminHomeController@index'
 )->name('admin.home.index');
+
+/*
+ *      Composers Admin Panel Routes
+ */
 
 Route::get(
     '/admin/composers',
@@ -97,3 +105,32 @@ Route::delete(
     '/admin/composers/{id}/delete}',
     'App\Http\Controllers\Admin\AdminComposerController@delete'
 )->name('admin.composer.delete');
+
+/*
+ *      Musical Styles Admin Panel Routes
+ */
+
+Route::get(
+    '/admin/styles',
+    'App\Http\Controllers\Admin\AdminStyleController@index'
+)->name('admin.style.index');
+
+Route::post(
+    '/admin/styles/store',
+    'App\Http\Controllers\Admin\AdminStyleController@store'
+)->name('admin.style.store');
+
+Route::get(
+    '/admin/styles/{id}/edit}',
+    'App\Http\Controllers\Admin\AdminStyleController@edit'
+)->name('admin.style.edit');
+
+Route::put(
+    '/admin/styles/{id}/update}',
+    'App\Http\Controllers\Admin\AdminStyleController@update'
+)->name('admin.style.update');
+
+Route::delete(
+    '/admin/styles/{id}/delete}',
+    'App\Http\Controllers\Admin\AdminStyleController@delete'
+)->name('admin.style.delete');
