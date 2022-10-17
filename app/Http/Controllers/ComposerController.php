@@ -32,6 +32,8 @@ class ComposerController extends Controller
         $viewData["title"] = "Snowdown Colliery Welfare Band";
         $viewData["subtitle"] = "Library - Composer: " . $composer->getComposer();
         $viewData["composer"] = $composer;
+        $viewData["music_composed_by"] = $composer->getMusicComposedBy();
+        $viewData["music_arranged_by"] = $composer->getMusicArrangedBy();
         return view('composer.show')->with("viewData", $viewData);
     }
 }

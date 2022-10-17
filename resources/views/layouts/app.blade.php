@@ -12,9 +12,9 @@
   </head>
   <body>
     <!-- HEADING -->
-    <div class="bg-primary">
+    <div class="header-image">
         <div class="container text-center">
-            <img src="{{ asset('/images/header1024x497hydepark2018.png') }}" alt="@yield('subtitle', 'Snowdown Colliery Welfare Band')">
+            <img src="{{ asset('/images/header1024x497.png') }}" alt="@yield('subtitle', 'Snowdown Colliery Welfare Band')">
         </div>
     </div>
     <!-- HEADING -->
