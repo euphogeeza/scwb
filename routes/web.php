@@ -134,3 +134,32 @@ Route::delete(
     '/admin/styles/{id}/delete}',
     'App\Http\Controllers\Admin\AdminStyleController@delete'
 )->name('admin.style.delete');
+
+/*
+ *      Music Admin Panel Routes
+ */
+
+Route::get(
+    '/admin/music',
+    'App\Http\Controllers\Admin\AdminMusicController@index'
+)->name('admin.music.index');
+
+Route::post(
+    '/admin/music/store',
+    'App\Http\Controllers\Admin\AdminMusicController@store'
+)->name('admin.music.store');
+
+Route::get(
+    '/admin/music/{id}/edit}',
+    'App\Http\Controllers\Admin\AdminMusicController@edit'
+)->name('admin.music.edit');
+
+Route::put(
+    '/admin/music/{id}/update}',
+    'App\Http\Controllers\Admin\AdminMusicController@update'
+)->name('admin.music.update');
+
+Route::delete(
+    '/admin/music/{id}/delete}',
+    'App\Http\Controllers\Admin\AdminMusicController@delete'
+)->name('admin.music.delete');
