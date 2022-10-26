@@ -38,6 +38,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('admin.concert.index') }}" class="nav-link text-white">
+                        Concerts
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('home.index') }}" class="mt-2 btn bg-primary text-white">
                         Go back to the homepage
                     </a>

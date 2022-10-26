@@ -92,17 +92,17 @@ Route::post(
 )->name('admin.composer.store');
 
 Route::get(
-    '/admin/composers/{id}/edit}',
+    '/admin/composers/{id}/edit',
     'App\Http\Controllers\Admin\AdminComposerController@edit'
 )->name('admin.composer.edit');
 
 Route::put(
-    '/admin/composers/{id}/update}',
+    '/admin/composers/{id}/update',
     'App\Http\Controllers\Admin\AdminComposerController@update'
 )->name('admin.composer.update');
 
 Route::delete(
-    '/admin/composers/{id}/delete}',
+    '/admin/composers/{id}/delete',
     'App\Http\Controllers\Admin\AdminComposerController@delete'
 )->name('admin.composer.delete');
 
@@ -121,12 +121,12 @@ Route::post(
 )->name('admin.style.store');
 
 Route::get(
-    '/admin/styles/{id}/edit}',
+    '/admin/styles/{id}/edit',
     'App\Http\Controllers\Admin\AdminStyleController@edit'
 )->name('admin.style.edit');
 
 Route::put(
-    '/admin/styles/{id}/update}',
+    '/admin/styles/{id}/update',
     'App\Http\Controllers\Admin\AdminStyleController@update'
 )->name('admin.style.update');
 
@@ -150,12 +150,12 @@ Route::post(
 )->name('admin.music.store');
 
 Route::get(
-    '/admin/music/{id}/edit}',
+    '/admin/music/{id}/edit',
     'App\Http\Controllers\Admin\AdminMusicController@edit'
 )->name('admin.music.edit');
 
 Route::put(
-    '/admin/music/{id}/update}',
+    '/admin/music/{id}/update',
     'App\Http\Controllers\Admin\AdminMusicController@update'
 )->name('admin.music.update');
 
@@ -163,3 +163,32 @@ Route::delete(
     '/admin/music/{id}/delete}',
     'App\Http\Controllers\Admin\AdminMusicController@delete'
 )->name('admin.music.delete');
+
+/*
+ *      Concerts Admin Panel Routes
+ */
+
+Route::get(
+    '/admin/concert',
+    'App\Http\Controllers\Admin\AdminConcertController@index'
+)->name('admin.concert.index');
+
+Route::post(
+    '/admin/concert/store',
+    'App\Http\Controllers\Admin\AdminConcertController@store'
+)->name('admin.concert.store');
+
+Route::get(
+    '/admin/concert/{id}/edit',
+    'App\Http\Controllers\Admin\AdminConcertController@edit'
+)->name('admin.concert.edit');
+
+Route::put(
+    '/admin/concert/{id}/update',
+    'App\Http\Controllers\Admin\AdminConcertController@update'
+)->name('admin.concert.update');
+
+Route::delete(
+    '/admin/concert/{id}/delete',
+    'App\Http\Controllers\Admin\AdminConcertController@delete'
+)->name('admin.concert.delete');
