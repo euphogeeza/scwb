@@ -15,10 +15,95 @@ nav {
 }
 
 .header-image {
-    background-image: url("http://localhost:8000/images/blurryBand1920x638.png");
-    background-repeat: no-repeat;
+    /* background-image: url("http://localhost:8000/images/blurryBand1920x638.png");
+    background-repeat: no-repeat; */
 }
 
 .copyright {
     background-color: #2c3e50;
 }
+
+.programme_piece_title {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.programme_piece_composer {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.programme_piece_soloist {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.scwb_sidebar {
+  background-color: #b4b4b4;
+}
+
+.scwb_sidebar_section_title {
+  margin: 3px 3px 3px 3px;
+  background-color: #61a2e4;
+}
+
+@media all and (min-width: 992px) {
+
+    .scwb_container {
+        
+    }
+
+    .container {
+        max-width: 1920px;
+        /* margin-left: 0px;
+        margin-right: 0px; */
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .navbar-nav {
+        font-family: inherit;
+        font-size: 1.4em;
+        color: #fff; 
+        font-weight: bold;
+    }
+
+    .dropdown-item {
+        font-family: inherit;
+        color: #fff; 
+        font-weight: bold; 
+        font-size: 1.2em;
+    }
+
+	.navbar .nav-item .dropdown-menu { 
+        font-family: inherit;
+        color: #fff; 
+        display: none; 
+        font-weight: bold; 
+    }
+
+	.navbar .nav-item:hover .nav-link { 
+        font-family: inherit;
+        color: #fff; 
+        font-weight: bold; 
+        background-color: 
+        #3875b3; 
+    }
+
+	.navbar .nav-item:hover .dropdown-menu { 
+        font-family: inherit;
+        color: #fff; 
+        display: block; 
+        background-color: #3875b3;
+        position: absolute; 
+        left:0%; 
+        top:39px;
+    }
+
+	.navbar .nav-item .dropdown-menu { 
+        font-family: inherit;
+        color: #fff; 
+        margin-top:0; 
+        font-weight: bold; 
+    }
+}	

@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col">
                 <div class="mb-3 row">
-                    <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Date/Time:</label>
+                    <label class="col-lg-2 col-md-6 col-sm-12 col-form-label">Date / Time:</label>
                     <div class="col-lg-10 col-md-6 col-sm-12">
                         <input name="concert_date_time" value="{{ old('concert_date_time') }}" type="text" class="form-control">
                     </div>
@@ -84,6 +84,8 @@
                     <th scope="col">ID</th>
                     <th scope="col">Date/Time</th>
                     <th scope="col">Venue</th>
+                    <th scope="col" colspan="2" text-align="center">CONCERT</th>
+                    <th scope="col" colspan="2" text-align="center">PROGRAMME</th>
                 </tr>
             </thead>
             <tbody>
@@ -94,18 +96,36 @@
                     <td>{{ $concert->getVenue() }}<br /><em>{{ $concert->getSubtitle() == '' ? '' : $concert->getSubtitle() }}</em></td>
                     <td>
                         <a class="btn btn-primary" href="{{ route('admin.concert.edit', ['id'=> $concert->getId()]) }}">
-                            <i class="bi-pencil"> </i>
-                        </a>
+                            <i class="bi-pencil"> Edit</i>
+                        </a> 
                     </td>
                     <td>
                         <form action="{{ route('admin.concert.delete', $concert->getId()) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger">
-                                <i class="bi-trash"> </i>
+                                <i class="bi-trash"> DELETE</i>
                             </button>
                         </form> 
                     </td>
+                    <td>
+                        <a class="btn btn-info" href="{{ route('admin.programme.edit', ['id'=> $concert->getId()]) }}">
+                            <i class="bi-music-note-list"> Edit</i>
+                        </a>
+                    </td>
+                    @if (! $concert['has_programme'])
+                        <td>&nbsp;</td>
+                    @else
+                        <td>
+                            <form action="{{ route('admin.programme.deleteProgramme', $concert->getId()) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger">
+                                    <i class="bi-trash"> DELETE</i>
+                                </button>
+                            </form>
+                        </td>
+                    @endif
                 </tr>
                 @endforeach
             </tbody>

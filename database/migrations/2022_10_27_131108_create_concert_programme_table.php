@@ -13,19 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('styles', function (Blueprint $table) {
+        Schema::create('programmes', function (Blueprint $table) {
             $table->id();
-            $table->string("style");
+            $table->unsignedBigInteger('concert_id');
+            $table->unsignedBigInteger('music_id');
+            $table->integer('order');
             $table->timestamps();
-        });
 
-        /**
-         * I need to think about creating the first record that NEEDS to be in the styles table.
-         * 
-         * id   style
-         * 1    -    
-         * 
-         */
+            $table->foreign('concert_id')->references('id')->on('concerts');
+            $table->foreign('music_id')->references('id')->on('music');
+        });
     }
 
     /**
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('styles');
+        Schema::dropIfExists('programmes');
     }
 };

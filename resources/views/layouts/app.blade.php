@@ -7,49 +7,74 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <title>{{ config('app.name', "SCWB Website") }}</title>
   </head>
   <body>
     <!-- HEADING -->
-    <div class="header-image">
-        <div class="container text-center">
-            <img src="{{ asset('/images/header1024x497.png') }}" alt="@yield('subtitle', 'Snowdown Colliery Welfare Band')">
-        </div>
+    <div class="container">
+        {{-- <img src="{{ asset('/images/header1024x497.png') }}" alt="@yield('subtitle', 'Snowdown Colliery Welfare Band')"> --}}
+        <img src="{{ asset('/images/header1920x344.png') }}" alt="@yield('subtitle', 'Snowdown Colliery Welfare Band')">
     </div>
     <!-- HEADING -->
 
     <!-- NAVIGATION -->
-    <div class="bg-secondary">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-4">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="#navbarNavAltMarkup"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"> </span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <a href="{{ route('home.index') }}" class="navbar-brand">Home</a>
-                    <a href="#" class="navbar-brand">About</a>
-                    <a href="#" class="navbar-brand">Performances</a>
-                    <a href="#" class="navbar-brand">Library</a>
-                    <a href="{{ route('composer.index') }}" class="navbar-brand">Composers</a>
-                    <a href="#" class="navbar-brand">Photo Albums</a>
-                </div>
-            </nav>
-        </div>
-    </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+            {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button> --}}
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="#">Home </a> </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">About </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"> - The Band </a></li>
+                        <li><a class="dropdown-item" href="#"> - The Players </a></li>
+                        <li><a class="dropdown-item" href="#"> - Find Us </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Performances </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('concert.index') }}"> - Concerts </a></li>
+                        <li><a class="dropdown-item" href="#"> - Google Calendar </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Music Library </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{ route('music.index') }}"> - A-Z by Title </a></li>
+                        <li><a class="dropdown-item" href="{{ route('composer.index') }}"> - A-Z by Composer </a></li>
+                        <li><a class="dropdown-item" href="{{ route('style.index') }}"> - A-Z by Style </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Photo Album </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#2018"> - 2018 - Present</a></li>
+                        <li><a class="dropdown-item" href="#2009"> - 2009 - 2018</a></li>
+                        <li><a class="dropdown-item" href="#1994"> - 1994 - 2009</a></li>
+                        <li><a class="dropdown-item" href="#1928"> - 1928 - 1994</a></li>
+                    </ul>
+                </li>
     
+                </ul>    
+            </div> <!-- navbar-collapse.// -->
+        </nav>
+    </div>
     <!-- NAVIGATION -->
 
     <!-- MAIN BODY -->
     <div class="container">
         <div class="row">
-            <div class="col-8">
-                @yield('content')
-            </div>
-            <div class="col-4">
+            <div class="col-2 scwb_sidebar">
                 @yield('sidebar')
+            </div>
+            <div class="col-10">
+                @yield('content')
             </div>
         </div>
     </div>

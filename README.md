@@ -1,64 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="https://snowdownband.org" target="_blank"><img src="https://snowdownband.org/wp-content/uploads/2022/10/scwb_logo.png" width="150"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# SNOWDOWN COLLIERY WELFARE BAND - WEBSITE
+## About Snowdown Colliery Welfare Band
 
-## About Laravel
+The Snowdown Colliery Welfare Band was founded in 1928 as a Colliery Band of the Snowdown coal mine, near Aylesham, in the Garden of England (Kent). 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The band still survives but with players from across Kent with only a few players having a family relationship with the pit.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## About the Website
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The website has multiple purposes / goals: 
 
-## Learning Laravel
+### Sharing the following with **THE PUBLIC**:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Lastest news concerning the band.
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/cross.png" width="20"> **TICKET #**:[468444](https://thefrasers.homelinux.net/support/scp/tickets.php?id=128) (ADD: Posts model, controller and view)
+- Past and future concert dates and venues. 
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/tick.png" width="20"> **TICKET #**:[401393](https://thefrasers.homelinux.net/support/scp/tickets.php?id=116) (ADD: Concerts model, controller and view)
+- Programmes for past concerts.  
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/cross.png" width="20"> **TICKET #**:[935714](https://thefrasers.homelinux.net/support/scp/tickets.php?id=115) (ADD: Concert Programme model, controller view and "CRUD" function to the Admin Panel)
+- The index of music in the bands music library.  
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/tick.png" width="20"> **TICKET #**:[137270](https://thefrasers.homelinux.net/support/scp/tickets.php?id=112) (ADD: Music model, controller and view) 
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/tick.png" width="20"> **TICKET #**:[461577](https://thefrasers.homelinux.net/support/scp/tickets.php?id=113) (ADD: Composers/Arrangers model, controller and view)
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/tick.png" width="20"> **TICKET #**:[171205](https://thefrasers.homelinux.net/support/scp/tickets.php?id=114) (ADD: Musical Styles model, controller and view)
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> Current and historic photos of the band.
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> A history of the band. (_STATIC PAGE_)
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> An introduction to the players.
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> Displaying the latest Twitter "tweets" from the bands Twitter account.
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> Displaying the latest Twitter "mentions" about the band
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> Displaying the latest stories on the band's Facebook Page.
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> Provide a SEARCH function that searches all of the above and presents an organised and categorised list of matches.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### In addition to that available to the public: Provide the following to the **BAND MEMBERS**:
 
-## Laravel Sponsors
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> Ability to edit thier own "Player Profile".
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> Ability to view and print a list of music in the current repitoire (Pad List).
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> Ability to view and print Concert Programmes before they are published to the public.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### In addition to that available "the public" and "band members": Provide the following to **BAND LIBRARIAN**, **MUSICAL DIRECTOR** and **WEBSITE ADMIN**:
 
-### Premium Partners
+_**Manage People**_
+- <img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> Ability to manage user accounts.
+- Ability to manage Bandsmen records.
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/cross.png" width="20"> **TICKET #**:[710812](https://thefrasers.homelinux.net/support/scp/tickets.php?id=119) (ADD: Bandsmen "CRUD" functions to the Admin Panel)
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/cross.png" width="20"> **TICKET #**:[881579](https://thefrasers.homelinux.net/support/scp/tickets.php?id=118) (ADD: Band Seats "CRUD" functions to the Admin Panel)
+- Ability to manage the Band Committee records.
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/cross.png" width="20"> **TICKET #**:[646640](https://thefrasers.homelinux.net/support/scp/tickets.php?id=120) (ADD: Committee "CRUD" functions to the Admin Panel)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+_**Manage News (Posts)**_
+- Ability to manage News / Posts records.
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/cross.png" width="20"> **TICKET #**:[137270](https://thefrasers.homelinux.net/support/scp/tickets.php?id=112) (ADD: Posts model, controller, view and CRUD function to the Admin Panel) 
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+_**Manage Library**_
+- Ability to manage music records.
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/tick.png" width="20"> **TICKET #**:[137270](https://thefrasers.homelinux.net/support/scp/tickets.php?id=112) (ADD: Music model, controller, view and CRUD function to the Admin Panel) 
+- Ability to manage composers/arrangers records.
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/tick.png" width="20"> **TICKET #**:[148452](https://thefrasers.homelinux.net/support/scp/tickets.php?id=124) (ADD: Concert "CRUD" functions to the Admin Panel)
+- Ability to manage music style records.
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/tick.png" width="20"> **TICKET #**:[574913](https://thefrasers.homelinux.net/support/scp/tickets.php?id=125) (ADD: Musical Styles "CRUD" functions to the Admin Panel)
+- Ability to manage the current "Pad List"
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/cross.png" width="20"> **TICKET #**:[xxxxxx](https://thefrasers.homelinux.net/support/scp/tickets.php?id=xxx) (ADD: Pad List function to the Admin Panel)
+- Ability to manage concert records.
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/tick.png" width="20"> **TICKET #**:[550998](https://thefrasers.homelinux.net/support/scp/tickets.php?id=127) (ADD: Concert "CRUD" functions to the Admin Panel)
+- Ability to manage concert programme records.
+  - <img src="https://snowdownband.org/wp-content/uploads/2022/10/cross.png" width="20"> **TICKET #**:[935714](https://thefrasers.homelinux.net/support/scp/tickets.php?id=115) (ADD: Concert Programme model, controller view and "CRUD" function to the Admin Panel)
 
 ## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+In order to ensure that the SCWB community is welcoming to all, please review and abide by the [Code of Conduct](#URL to Code of Conduct file).
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within the Snowdown Colliery Welfare Bands website, please send an e-mail to Ritchie Fraser via [snowdownband@gmail.com](mailto:snowdownband@gmail.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Snowdown Colliery Welfare Bands website is open-sourced software licensed under the [GPL v2 license](https://opensource.org/licenses/gpl-2.0.php).
+
+
+
+
+---
+<img src="https://snowdownband.org/wp-content/uploads/2019/11/music_programme.png" width="20"> 
+<img src="https://snowdownband.org/wp-content/uploads/2022/10/tick.png" width="20"> 
+<img src="https://snowdownband.org/wp-content/uploads/2022/10/qmark.png" width="20"> 
+<img src="https://snowdownband.org/wp-content/uploads/2022/10/cross.png" width="20"> 
+

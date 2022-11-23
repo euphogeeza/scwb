@@ -4,17 +4,49 @@
 @section('content')
 <div class="text-center">
     <div class="container">
+        <div class="row mb-4">
+            <h2>{{ $viewData["subtitle"] }}</h2>
+        </div>
         <div class="row">
-            <h1>{{ $viewData["subtitle"] }}</h1>
-            <p>Record ID: {{  $viewData["concert"]->getId() }}</p>
-            <p>Date / Time:{{  $viewData["concert"]->getConcertDateTime() }}</p>
-            <p>Venue: {{  $viewData["concert"]->getVenue() }}</p>
-            <p>Sub-Title: {{  $viewData["concert"]->getSubTitle() }}</p>
-            <p>Display Concert: {{  $viewData["concert"]->getDisplay() }}</p>
-            <p>Display Concert Programme: {{  $viewData["concert"]->getDisplayProgramme() }}</p>
-
+            <div class="programme_piece_title">
+                VENUE: {{ $viewData["concert"]->getVenue() }}
+            </div>
+            <div class="row">
+                <div class="programme_piece_title">
+                    {{ $viewData["concert"]->getSubTitle() }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="programme_piece_composer">
+                {{ $viewData["concert"]->getConcertDateTime() }}
+            </div>
         </div>
     </div>
+
+    <?php
+    if( $viewData["concert"]->getDisplayProgramme() == 1  && $viewData["num_concert_pieces"] > 0 ) {
+    ?>    
+    
+    <div class="container">
+        <div class="row mb-4 mt-4">
+            <h2>~~~ PROGRAMME ~~~</h2>
+        </div>
+        @foreach($viewData["programme"] as $piece)
+        <div class="row mb-4">
+            <div class="programme_piece_title">{{ $piece->style != "-" ? $piece->style . ": " : '' }} {{ $piece->title }}</div>
+            <div class="programme_piece_composer">
+                {{ $piece->CompArrStr != "" ? $piece->CompArrStr: ''}}
+            </div>
+            <div class="programme_piece_soloist"><em>{{ $piece->soloist ? "Soloist: " . $piece->soloist : '' }}</em></div>
+        </div>
+        @endforeach
+    </div>
+
+    <?php
+    }
+    ?>    
+
 </div>
 @endsection
 @section('sidebar')

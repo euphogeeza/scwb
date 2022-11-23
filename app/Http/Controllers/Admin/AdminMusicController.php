@@ -18,7 +18,7 @@ class AdminMusicController extends Controller
         $viewData["composers"] = Composer::all();
         $viewData["styles"] = Style::all();
         /*
-         * The Music::all() above should be replaced with an appropriate 
+         * The Music::all() above should be replaced with an appropriate
          * MusicView::all() which has composer and arranger names and style names.
          */
         return view('admin.music.index')->with("viewData", $viewData);

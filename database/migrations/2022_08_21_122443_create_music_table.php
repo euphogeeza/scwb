@@ -30,6 +30,15 @@ return new class extends Migration
             $table->foreign('style_id')->references('id')->on('styles');
 
         });
+
+        /**
+         * I need to think about creating the first two records that NEED to be in the music table.
+         * 
+         * id   title                               composer_id     arranger_id     style_id
+         * 0    Select music title                  1               1               1
+         * 1    -=-=-=-=-=- Interval -=-=-=-=-=-    1               1               1
+         * 
+         */
     }
 
     /**

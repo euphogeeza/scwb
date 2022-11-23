@@ -192,3 +192,63 @@ Route::delete(
     '/admin/concert/{id}/delete',
     'App\Http\Controllers\Admin\AdminConcertController@delete'
 )->name('admin.concert.delete');
+
+/*
+ *      Concert Programmes Admin Panel Routes
+ */
+
+Route::get(
+    '/admin/programme/{id}/create',
+    'App\Http\Controllers\Admin\AdminProgrammeController@create'
+    )->name('admin.programme.create');
+    
+Route::get(
+    '/admin/programme',
+    'App\Http\Controllers\Admin\AdminProgrammeController@index'
+    )->name('admin.programme.index');
+    
+Route::post(
+    '/admin/programme/store',
+    'App\Http\Controllers\Admin\AdminProgrammeController@store'
+    )->name('admin.programme.store');
+    
+Route::get(
+    '/admin/programme/{id}/edit',
+    'App\Http\Controllers\Admin\AdminProgrammeController@edit'
+)->name('admin.programme.edit');    
+
+// Route::put(
+//     '/admin/programme/{id}/update',
+//     'App\Http\Controllers\Admin\AdminProgrammeController@update'
+// )->name('admin.programme.update');
+
+Route::delete(
+    '/admin/programme/{id}/deleteItem',
+    'App\Http\Controllers\Admin\AdminProgrammeController@deleteItem'
+)->name('admin.programme.deleteItem');
+
+Route::put(
+    '/admin/programme/{id}/moveup',
+    'App\Http\Controllers\Admin\AdminProgrammeController@moveup'
+)->name('admin.programme.moveup');    
+
+Route::put(
+    '/admin/programme/{id}/movedown',
+    'App\Http\Controllers\Admin\AdminProgrammeController@movedown'
+)->name('admin.programme.movedown');    
+
+// Route::get(
+//     '/admin/programme/{id}/createProgramme',
+//     'App\Http\Controllers\Admin\AdminProgrammeController@createProgramme'
+// )->name('admin.programme.createProgramme');
+
+Route::delete(
+    '/admin/programme/{id}/deleteProgramme',
+    'App\Http\Controllers\Admin\AdminProgrammeController@deleteProgramme'
+)->name('admin.programme.deleteProgramme');
+
+// Route::put(
+//     '/admin/programme/{id}/updateProgramme',
+//     'App\Http\Controllers\Admin\AdminProgrammeController@updateProgramme'
+// )->name('admin.programme.updateProgramme'); 
+   

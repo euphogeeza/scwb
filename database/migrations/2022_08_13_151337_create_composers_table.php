@@ -19,6 +19,14 @@ return new class extends Migration
             $table->string('lastname');
             $table->timestamps();
         });
+
+        /**
+         * I need to think about creating the first record that NEEDS to be in the composers table.
+         * 
+         * id   firstname   lastname
+         * 1    -           -
+         * 
+         */
     }
 
     /**
